@@ -1,5 +1,7 @@
 import React from "react";
 import TableComponent from "./table-data";
+import { Button } from "@/components/ui/button";
+import ButtonPrint from "./button-print";
 
 const resultPage = async ({ searchParams }: any) => {
   const htno = searchParams.htno;
@@ -12,6 +14,7 @@ const resultPage = async ({ searchParams }: any) => {
       <div>
         <TableComponent result={result} />
       </div>
+      <ButtonPrint />
     </div>
   );
 };
