@@ -30,7 +30,7 @@ const TableComponent = (result: any) => {
             <TableCell className="font-medium">
               {data.Details.Roll_No}
             </TableCell>
-            <TableCell>{data.Details.NAME}</TableCell>
+            <TableCell>MR./MRS.{data.Details.NAME}</TableCell>
             <TableCell>{data.Details.FATHER_NAME}</TableCell>
           </TableRow>
         </TableBody>
