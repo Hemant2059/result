@@ -10,7 +10,7 @@ const resultPage = async ({ searchParams }: any) => {
   );
   const result = await res.json();
   return (
-    <div className="">
+    <div className="py-5">
       <div className="">
         <TableComponent result={result} />
       </div>

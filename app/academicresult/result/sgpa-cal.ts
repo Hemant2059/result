@@ -6,7 +6,7 @@ function calculateSGPA(semesterData: any, hallTicket: string) {
     C: 7,
     D: 6,
     F: 0,
-    AB: 0,
+    Ab: 0,
   } as { [key: string]: number };
   const gradePointMapping = {
     O: 10,
@@ -16,7 +16,7 @@ function calculateSGPA(semesterData: any, hallTicket: string) {
     B: 6,
     C: 5,
     F: 0,
-    AB: 0,
+    Ab: 0,
   } as { [key: string]: number };
 
   let totalCredits = 0.0;
@@ -27,11 +27,10 @@ function calculateSGPA(semesterData: any, hallTicket: string) {
     if (["total", "credits", "CGPA"].includes(subjectCode)) continue;
     const subject = semesterData[subjectCode];
     const grade = subject.subject_grade;
-    if (grade === "F") {
+    if (grade === "F" || grade === "Ab") {
       return "AALU";
     }
     const credit = parseFloat(subject.subject_credits);
-    console.log(credit);
 
     totalCredits += credit;
     if (firsttwodigit >= 22)
