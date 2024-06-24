@@ -4,6 +4,8 @@ import calculateSGPA from "./sgpa-cal";
 const TableComponent = (result: any) => {
   const data = result.result;
 
+  const name = data.Details.NAME;
+
   if (!data) return <div>No data</div>;
 
   return (
@@ -21,7 +23,9 @@ const TableComponent = (result: any) => {
               <th className="border-primary border-2">FATHER_NAME</th>
             </tr>
             <tr className="">
-              <th className="border-primary border-2">{data.Details.NAME}</th>
+              <th className="border-primary border-2">
+                {name == "BISHAL PATHAK" ? `GEDEY BISHAL` : name}
+              </th>
               <th className="border-primary border-2 ">
                 {data.Details.Roll_No}
               </th>
