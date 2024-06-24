@@ -10,11 +10,13 @@ const resultPage = async ({ searchParams }: any) => {
   );
   const result = await res.json();
   return (
-    <div>
-      <div>
+    <div className="">
+      <div className="">
         <TableComponent result={result} />
       </div>
-      <ButtonPrint />
+      <div className="flex items-center justify-center">
+        <ButtonPrint />
+      </div>
     </div>
   );
 };
