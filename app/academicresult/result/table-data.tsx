@@ -9,7 +9,7 @@ const TableComponent = (result: any) => {
   return (
     <div>
       <div className="flex items-center justify-center py-2 font-bold text-xl">
-        <h1>Acedemic Results</h1>
+        <h1>Academic Results of {data.Details.NAME}</h1>
       </div>
       <div className="m-2 text-[30%] sm:text-[45%] md:text-[60%] lg:text-[100%]">
         <table className="w-[100%] my-2 border-2 border-primary rounded">
