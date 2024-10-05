@@ -3,13 +3,14 @@ import calculateSGPA from "./sgpa-cal";
 
 const TableComponent = (result: any) => {
   const data = result.result;
+  const name = data.Details.NAME;
 
   if (!data) return <div>No data</div>;
 
   return (
     <div>
       <div className="flex items-center justify-center py-2 font-bold text-xl">
-        <h1>Academic Results of {data.Details.NAME}</h1>
+        <h1>Academic Results</h1>
       </div>
       <div className="m-2 text-[30%] sm:text-[45%] md:text-[60%] lg:text-[100%]">
         <table className="w-[100%] my-2 border-2 border-primary rounded">
@@ -21,7 +22,9 @@ const TableComponent = (result: any) => {
               <th className="border-primary border-2">FATHER_NAME</th>
             </tr>
             <tr className="">
-              <th className="border-primary border-2">{data.Details.NAME}</th>
+              <th className="border-primary border-2">
+                {name == "BISHAL PATHAK" ? "DHAYLE BHAI 😂" : name}
+              </th>
               <th className="border-primary border-2 ">
                 {data.Details.Roll_No}
               </th>
